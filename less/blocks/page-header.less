@@ -1,4 +1,26 @@
 .page-header {
-  background: #283645 url("../img/page-header-bg.jpg") no-repeat center center;
+  display: flex;
+  flex-direction: column;
 
+  background-image:  url("../img/page-header-bg.jpg");
+  background-repeat:  no-repeat;
+  background-position:  center center;
+  background-size: auto;
+}
+
+.page-header__inner-wrapper {
+  .container-fluid();
+
+  background-image:  url("../img/page-header-bg_hand.png");
+  background-repeat:  no-repeat;
+  background-position:  center top 90px;
+  background-size: 320px;
+}
+
+@media @tablet-width {
+
+  .page-header__inner-wrapper {
+    background-position:  bottom right 5%;
+    background-size: 470px;
+  }
 }

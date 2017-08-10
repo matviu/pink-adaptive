@@ -18,6 +18,10 @@
   background-color: transparent;
 }
 
+..main-nav__logo {
+  color: red;
+}
+
 .main-nav__toggle {
   position: relative;
   margin-left: auto;
@@ -47,11 +51,21 @@
   &:after {
     transform: rotate(-45deg);
   }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: #d22856;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .main-nav_closed .main-nav__toggle {
 
-  &:before  {
+  &::before  {
     content: "";
     position: absolute;
     top: 0px;
@@ -63,20 +77,27 @@
     box-shadow: 0 10px 0 0 #ffffff,
                 0 20px 0 0 #ffffff,
   }
+
+  &:hover::before {
+    background-color: #d22856;
+    box-shadow: 0 10px 0 0 #d22856,
+                0 20px 0 0 #d22856,
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__list {
   position: absolute;
+  top: 70px;
+  left: 0;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
-.main-nav_closed .main-nav__list {
-  display: none;
-}
-
 
 .main-nav__item a {
   display: block;
@@ -113,10 +134,94 @@
   display: block;
 }
 
+@media @mobile-and-tablet-width-only {
+
+  .main-nav_closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav_opened .main-nav__list {
+    display: block;
+  }
+
+}
+
 @media @tablet-width {
 
   .main-nav__visible {
     min-height: 110px;
     padding: 0;
+  }
+
+  .main-nav__list {
+    top: 110px;
+  }
+}
+
+@media @desktop-width {
+
+  .main-nav__logo {
+    margin-right: 170px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    position: static;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__list .main-nav__item a {
+    position: relative;
+    display: block;
+    padding: 75px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: rgba(255,255,255,0.3);
+    }
+
+    &:active::after {
+      display: none;
+    }
+  }
+
+  .main-nav__list .main-nav__item_current a {
+
+    &:hover {
+      color: #d22856;
+    }
+
+    &:hover::after {
+      background-color: #d22856;
+    }
+
+    &:active {
+      color: rgba(255,255,255,0.3);
+    }
+
+    &:active::after {
+      display: none;
+    }
   }
 }

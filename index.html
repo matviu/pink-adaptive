@@ -11,31 +11,35 @@
 
     <nav class="main-nav main-nav_closed main-nav_nojs">
       <div class="wrapper-layout-center main-nav__visible">
-         <picture>
-          <source media="(min-width: 1200px)" srcset="img/nav-logo-desktop.png">
-          <source media="(min-width: 700px)" srcset="img/nav-logo-tablet.png">
-          <img class="main-nav__logo" src="img/nav-logo-mobile.png">
-        </picture>
+        <a href="#">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/nav-logo-desktop.png">
+            <source media="(min-width: 700px)" srcset="img/nav-logo-tablet.png">
+            <img class="main-nav__logo" src="img/nav-logo-mobile.png">
+          </picture>
+        </a>
         <button class="main-nav__toggle" type="button"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item_current"><a href="#">Главная</a></li>
+          <li class="main-nav__item"><a href="#">Фотографии</a></li>
+          <li class="main-nav__item"><a href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a href="#">Html academy</a></li>
+        </ul>
       </div>
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a href="#">Главная</a></li>
-        <li class="main-nav__item"><a href="#">Фотографии</a></li>
-        <li class="main-nav__item"><a href="#">Конкурс</a></li>
-        <li class="main-nav__item"><a href="#">Html academy</a></li>
-      </ul>
     </nav>
 
-    <section class="obtain">
-      <a href="#" class="obtain__download-btn">Скачать приложение</a>
-      <div class="obtain__resources">
-        <a href="#" class="obtain__resource">Apple</a>
-        <a href="#" class="obtain__resource">Android</a>
-        <a href="#" class="obtain__resource">Windows</a>
+    <div class="page-header__inner-wrapper">
+      <section class="obtain">
+        <p class="obtain__slogan">Взгляните на жизнь иначе!</p>
+        <a href="#" class="obtain__download-btn">Скачать приложение</a>
+        <div class="obtain__resources">
+          <a href="#" class="obtain__resource obtain__resource_apple">Apple</a>
+          <a href="#" class="obtain__resource obtain__resource_andriod">Android</a>
+          <a href="#" class="obtain__resource obtain__resource_windows">Windows</a>
+        </div>
         <p class="obtain__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </div>
-    </section>
-
+      </section>
+    </div>
   </header>
 </body>
 <script src="js/javascript.js"></script>

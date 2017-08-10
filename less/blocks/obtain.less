@@ -1,0 +1,95 @@
+.obtain {
+  padding: 30px 20px;
+  margin-top: 395px;
+  background-color: #1d2631;
+  color: #ffffff;
+}
+
+.obtain__slogan {
+  display: none;
+}
+
+.obtain__download-btn {
+  display: block;
+
+  margin-bottom: 25px;
+  padding: 13px 0;
+  width: 100%;
+
+  border: 3px solid #ffffff;
+  border-radius: 28px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #d22856;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}
+
+.obtain__resources {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  padding: 0 15px;
+}
+
+.obtain__resource {
+  flex-basis: 70px;
+  height: 70px;
+  background: url("../img/resources-sprite.png") no-repeat 0px 0px;
+  font-size: 0;
+}
+
+.obtain__resource_apple {
+  background-position: 12px 5px;
+}
+
+.obtain__resource_andriod {
+  background-position: -68px 5px;
+}
+
+.obtain__resource_windows {
+  background-position: -147px 5px;
+}
+
+.obtain__description {
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media @tablet-width {
+
+  .obtain {
+    margin-top: 200px;
+    max-width: 300px;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .obtain__slogan {
+    display: block;
+    padding: 0 40px;
+
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 100;
+  }
+}
