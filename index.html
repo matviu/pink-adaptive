@@ -41,6 +41,83 @@
       </section>
     </div>
   </header>
+
+  <section class="features">
+    <h1 class="features__title">
+      <div class="wrapper-layout-center features__title-wrapper">
+        Устали от серости мегаполиса?<br><br> Нам есть,что вам предложить!
+      </div>
+    </h1>
+    <div class="wrapper-layout-center">
+      <div class="features__container">
+        <div class="features__descriptions">
+          <p class="features__description">
+            <b>Поднимает настроение</b>
+            Приложение позволит вам победить осенюю хандру и депрессию буквально в несколько кликов!
+          </p>
+          <p class="features__description">
+            <b>Меняет мир вокруг</b>
+            Сделайте снимок и украсьте смайликом или текстовой подписью, чтобы усилить эффект
+          </p>
+          <p class="features__description">
+            <b>Заводить новых друзей</b>
+            Ставьте лайк, комментируйте, делитесь фотографиями с друзьями и зваодите новых
+          </p>
+        </div>
+        <div class="features__iphone-imgs">
+          <div class="features__iphone-img">
+            <img src="img/grey.jpg" alt="grey" id="features__mobile" class="features__img">
+          </div>
+          <div class="features__iphone-img">
+            <img src="img/pink.jpg" alt="pink" class="features__img">
+          </div>
+          <div class="features__iphone-img">
+            <img src="img/pink-smile.jpg" alt="pink-smile" class="features__img">
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="research">
+    <div class="wrapper-layout-center research__wrapper">
+      <img src="img/research-img.png" alt="clock" class="research__img">
+      <div class="research__info">
+        <b class="research__slogan">Эффект<br> на 24 часа</b>
+        <p class="research__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a href="" class="link research__learn-more">Узнать больше об исследовании</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="responses">
+    <div class="wrapper-layout-center responses__wrapper">
+      <div class="responses__inner-container">
+        <div class="response">
+          <h2 class="response__name">Николай Петров</h2>
+          <p class="response__author-info">45 лет, директор газпрома</p>
+          <p class="response__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="response">
+          <h2 class="response__name">Сергей Прывалов</h2>
+          <p class="response__author-info">32 лет, водитель автобуса</p>
+          <p class="response__content"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="response">
+          <h2 class="response__name">Алексей Миллер</h2>
+          <p class="response__author-info">25 лет, водитель троллейбуса</p>
+          <p class="response__content"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="responses__dots">
+        <span class="responses__dot responses__dot_current" onclick="moveCurrentResponse(1)"></span>
+        <span class="responses__dot" onclick="moveCurrentResponse(2)"></span>
+        <span class="responses__dot" onclick="moveCurrentResponse(3)"></span>
+      </div>
+      <button class="responses__prev" type="button" onclick="plusCurrentResponse(-1)"><</button>
+      <button class="responses__next" type="button" onclick="plusCurrentResponse(1)">></button>
+    </div>
+  </section>
+
 </body>
 <script src="js/javascript.js"></script>
 </html>
