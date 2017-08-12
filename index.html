@@ -113,11 +113,92 @@
         <span class="responses__dot" onclick="moveCurrentResponse(2)"></span>
         <span class="responses__dot" onclick="moveCurrentResponse(3)"></span>
       </div>
-      <button class="responses__prev" type="button" onclick="plusCurrentResponse(-1)"><</button>
-      <button class="responses__next" type="button" onclick="plusCurrentResponse(1)">></button>
+      <button class="responses__prev" type="button" onclick="plusCurrentResponse(-1)">&#10094</button>
+      <button class="responses__next" type="button" onclick="plusCurrentResponse(1)">&#10095</button>
     </div>
   </section>
 
+  <section class="price">
+    <div class="wrapper-layout-center price__wrapper">
+      <div class="price__inner-container">
+        <div class="price__table">
+          <div class="price__column price__column_components">
+            <div class="price__header"></div>
+            <div class="price__line price__line_first">Розовый фильтр</div>
+            <div class="price__line price__line_second">Смайлики</div>
+            <div class="price__line price__line_third">Комментарии</div>
+          </div>
+          <div class="price__column price__column_base">
+            <div class="price__header">
+              <b>База</b>
+              1,99 usd
+            </div>
+            <div class="price__line price__line_first check"><span>Розовый фильтр</span></div>
+            <div class="price__line price__line_second nocheck"><span>Смайлики</span></div>
+            <div class="price__line price__line_third nocheck"><span>Комментарии</span></div>
+          </div>
+          <div class="price__column price__column_standard">
+            <div class="price__header">
+              <b>стандарт</b>
+              3,99 usd
+            </div>
+            <div class="price__line price__line_first check"><span>Розовый фильтр</span></div>
+            <div class="price__line price__line_second check"><span>Смайлики</span></div>
+            <div class="price__line price__line_third nocheck"><span>Комментарии</span></div>
+          </div>
+          <div class="price__column price__column_unlim">
+            <div class="price__header">
+              <b>Анлим</b>
+              9,99 usd
+            </div>
+            <div class="price__line price__line_first check"><span>Розовый фильтр</span></div>
+            <div class="price__line price__line_second check"><span>Смайлики</span></div>
+            <div class="price__line price__line_third check"><span>Комментарии</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="price__dots">
+        <span class="price__dot price__dot_current" onclick="moveCurrentPrice(1)"></span>
+        <span class="price__dot" onclick="moveCurrentPrice(2)"></span>
+        <span class="price__dot" onclick="moveCurrentPrice(3)"></span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <div class="wrapper-layout-center">
+      <p class="page-footer__slogan">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="page-footer__info-container">
+        <div class="page-footer__info page-footer__phone">
+          <b>Звоните:</b>
+          <a href="tel:+78125556666" class="page-footer__link">+7(812)555-66-66</a>
+        </div>
+        <div class="page-footer__info page-footer__email">
+          <b>Пишите:</b>
+          <a href="#" class="page-footer__link">mail@htmlacademy.ru</a>
+        </div>
+        <div class="page-footer__info page-footer__adress">
+          <b>Приезжайте в гости:</b>
+          <span class="page-footer__link">улюБольшая Конюшенная, 19/8</span>
+        </div>
+      </div>
+    </div>
+    <div id="yandex-map"></div>
+    <div class="wrapper-layout-center">
+      <div class="bottom-line">
+        <img src="img/bottom-line-logo.png" alt="PINK" class="bottom-line__logo">
+        <div class="social">
+          <a href="#" class="social-btn social-btn_tw">twitter</a>
+          <a href="#" class="social-btn social-btn_fb">facebook</a>
+          <a href="#" class="social-btn social-btn_yt">youtube</a>
+        </div>
+        <div class="bottom-line__copyright">
+          Разработано:
+          <img src="img/copyright-logo.png" alt="#" class="bottom-line__copyright-logo">
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 <script src="js/javascript.js"></script>
 </html>
