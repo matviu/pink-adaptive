@@ -124,10 +124,6 @@ bottomLogo.onmouseover = function(e) {
   bottomLogo.src = bottomLogo.src.replace("img/bottom-line-logo.png" ,"img/bottom-line-logo_hover.png");
 }
 
-bottomLogo.onmouseover = function(e) {
-  bottomLogo.src = bottomLogo.src.replace("img/bottom-line-logo.png" ,"img/bottom-line-logo_hover.png");
-}
-
 bottomLogo.onmouseout = function(e) {
   bottomLogo.src = bottomLogo.src.replace("img/bottom-line-logo_hover.png" ,"img/bottom-line-logo.png");
 }
@@ -138,4 +134,25 @@ bottomLogo.onmousedown = function(e) {
 
 bottomLogo.onmouseup = function(e) {
   bottomLogo.src = bottomLogo.src.replace("img/bottom-line-logo_active.png" ,"img/bottom-line-logo_hover.png");
+}
+
+
+/*----------------copyright logo change-------------*/
+
+var copyrightLogo = document.querySelector('.bottom-line__copyright-logo');
+
+copyrightLogo.onmouseover = function(e) {
+  copyrightLogo.src = copyrightLogo.src.replace("img/copyright-logo.png" ,"img/copyright-logo_hover.png");
+}
+
+copyrightLogo.onmouseout = function(e) {
+  copyrightLogo.src = copyrightLogo.src.replace("img/copyright-logo_hover.png" ,"img/copyright-logo.png");
+}
+
+copyrightLogo.onmousedown = function(e) {
+  copyrightLogo.src = copyrightLogo.src.replace("img/copyright-logo_hover.png" ,"img/copyright-logo_active.png");
+}
+
+copyrightLogo.onmouseup = function(e) {
+  copyrightLogo.src = copyrightLogo.src.replace("img/copyright-logo_active.png" ,"img/copyright-logo_hover.png");
 }

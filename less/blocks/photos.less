@@ -1,0 +1,146 @@
+.photos__main-photo {
+  max-height: 140px;
+  width: 100%;
+  height: auto;
+}
+
+.photos__wrapper {
+  padding: 0 20px;
+}
+
+.photos__inner-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.photos__item {
+  margin-bottom: 20px;
+}
+
+.photos__img {
+  width: 100%;
+  height: auto;
+}
+
+.photos__user-info {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  background-color: #f2f2f2;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+}
+
+.photos__user-info_main {
+  margin-bottom: 20px;
+}
+
+.photos__user-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.photos__post-time {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.photos__like-btn {
+  width: 16px;
+  height: 16px;
+  margin-right: 5%;
+
+  border: none;
+  background: url("../img/like-sprite.png") no-repeat 1px 2px;
+
+  &:hover {
+    background-position: 1px -19px;;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.photos__likes {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+
+  color: #d22856;
+}
+
+.photos__likes-count {
+  font-size: 14px;
+}
+
+@media @tablet-width {
+
+  .photos__main-photo {
+    max-height: 500px;
+  }
+
+  .photos__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    padding: 0;
+  }
+
+  .photos__user-info_main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .photos__user-info_main .photos__description {
+    order: 2;
+    width: 100%
+  }
+
+  .photos__user-info_main .photos__inner-wrapper_likes {
+    margin-left: auto;
+  }
+
+  .photos__user-info_main .photos__likes {
+    margin-right: 10px;
+  }
+
+  .photos__item {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+  }
+
+  .photos__user-info {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .photos__description {
+    flex-grow: 1;
+  }
+
+  .photos__like-btn {
+    order: 2;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+@media @desktop-width {
+  .photos__item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+}
