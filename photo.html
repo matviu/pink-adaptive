@@ -33,7 +33,7 @@
     </div>
   </header>
 
-  <div class="wrapper-layout-center">
+  <div class="wrapper-layout-center slogan-wrapper">
     <p class="photo-slogan photo-slogan-1">Взгляните на фотографии, которые выкладывают пользователи! Видите как не хватает ваших?</p>
   </div>
 
@@ -192,45 +192,74 @@
     </div>
   </section>
 
-  <div class="wrapper-layout-center">
+  <div class="wrapper-layout-center  slogan-wrapper">
     <p class="photo-slogan photo-slogan-2">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
   </div>
 
   <section class="add-photo">
     <div class="wrapper-layout-center add-photo__wrapper">
       <div class="add-photo__photo-container">
-        <img src="img/" alt="ваше фото" class="add-photo__photo">
+        <img src="img/add-photo-example.jpg" alt="ваше фото" class="add-photo__photo">
       </div>
       <div class="add-photo__ctrl">
         <div class="add-photo__settings">
           <div class="add-photo__setting add-photo__setting_cadr">
-            <span class="settings-icon cadr-icon"></span>
-            <div class="settings-slide">
+            <label>
+              <input class="cadr_active" type="radio" name="settings-toggle">
+              <span class="settings-icon cadr-icon"></span>
+            </label>
+            <div class="settings-slide settings-slide_cadr">
               <span class="settings-slider"></span>
             </div>
           </div>
           <div class="add-photo__setting add-photo__setting_fill">
-            <span class="settings-icon fill-icon"></span>
-            <div class="settings-slide">
+            <label>
+              <input class="fill_active" type="radio" name="settings-toggle">
+              <span class="settings-icon fill-icon"></span>
+            </label>
+            <div class="settings-slide settings-slide_fill">
               <span class="settings-slider"></span>
             </div>
           </div>
           <div class="add-photo__setting add-photo__setting_contrast">
-            <span class="settings-icon contrast-icon"></span>
-            <div class="settings-slide">
+            <label>
+              <input class="contrast_active" type="radio" name="settings-toggle">
+              <span class="settings-icon contrast-icon"></span>
+            </label>
+            <div class="settings-slide settings-slide_contrast">
               <span class="settings-slider"></span>
             </div>
           </div>
         </div>
+
+        <div class="mobile-slide-container"></div>
+
         <div class="add-photo__btns">
-          <button type="button" class="add-photo__btn">Запостить
+          <button type="button" class="add-photo__btn add-photo__btn_add">Запостить
           </button>
-          <button type="button"class="add-photo__btn">Отмена
+          <button type="button"class="add-photo__btn add-photo__btn_cancel">Отмена
           </button>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="wrapper-layout-center">
+    <div class="bottom-line bottom-line_photo">
+      <a href="index.html" class="disabled">
+        <img src="img/bottom-line-logo.png" alt="PINK" class="bottom-line__logo">
+      </a>
+      <div class="social">
+        <a href="#" class="social-btn social-btn_tw">twitter</a>
+        <a href="#" class="social-btn social-btn_fb">facebook</a>
+        <a href="#" class="social-btn social-btn_yt">youtube</a>
+      </div>
+      <div class="bottom-line__copyright">
+        Разработано
+        <img src="img/copyright-logo.png" alt="#" class="bottom-line__copyright-logo">
+      </div>
+    </div>
+  </div>
 
 </body>
 <script src="js/javascript.js"></script>

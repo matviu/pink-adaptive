@@ -2,10 +2,32 @@
   display: none;
 }
 
+.bottom-line_photo {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 245px;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-line__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: 130px;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
 @media @tablet-width {
 
   .bottom-line {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
@@ -17,16 +39,7 @@
     height: 100%;
   }
 
-  .bottom-line__copyright {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    min-width: 130px;
-
-    font-size: 14px;
-    line-height: 18px;
-  }
 }
 
 @media @desktop-width {
