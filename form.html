@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Записаться - PINK</title>
+</head>
+<body class="form-body">
+  <header class="page-header">
+
+    <nav class="main-nav main-nav_closed main-nav_nojs">
+      <div class="wrapper-layout-center main-nav__visible">
+        <a href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/nav-logo-desktop.png">
+            <source media="(min-width: 700px)" srcset="img/nav-logo-tablet.png">
+            <img class="main-nav__logo" src="img/nav-logo-mobile.png">
+          </picture>
+        </a>
+        <button class="main-nav__toggle" type="button"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item_current"><a href="#">Главная</a></li>
+          <li class="main-nav__item"><a href="#">Фотографии</a></li>
+          <li class="main-nav__item"><a href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a href="#">Html academy</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-header__inner-wrapper">
+      <h1 class="page-header__form-title">Конкурс на самое безбашенное путешествие с Пинк.</h1>
+    </div>
+  </header>
+
+  <section class="questionnaire">
+    <div class="wrapper-layout-center questionnaire__wrapper">
+      <p class="questionnaire__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
+    </div>
+
+    <div class="wrapper-layout-center questionnaire__wrapper questionnaire__wrapper_form">
+      <form action="#" class="questionnaire__form">
+        <fieldset class="questionnaire__field user-fullname">
+          <label class="user-fullname__label">
+            Фамилия:
+            <input class="questionnaire__textfield user-fullname__textfield" type="text" name="surename" placeholder="Укажите фамилию">
+          </label>
+          <label class="user-fullname__label">
+            Имя:
+            <input class="questionnaire__textfield user-fullname__textfield" type="text" name="name" placeholder="Введите ваше имя">
+          </label>
+          <label class="user-fullname__label">
+            Отчество:
+            <input class="questionnaire__textfield user-fullname__textfield" type="text" name="second-name" placeholder="ну и отчество тоже">
+          </label>
+        </fieldset>
+
+        <div class="grey-bg flex-wrapper_user-achivements">
+        <fieldset class="questionnaire__field user-achivements">
+          <legend class="questionnaire__legend">Ваши безбашенные достижения в путешествии</legend>
+          <label class="user-achivements__label">
+            <input type="checkbox" class="invisible-checkbox" name="achivement-1">
+            <span class="visible-checkbox"></span>
+            Сделал селфи с акулой
+          </label>
+          <label class="user-achivements__label">
+            <input type="checkbox" class="invisible-checkbox" name="achivement-2">
+            <span class="visible-checkbox"></span>
+            Обгорел на пляже
+          </label>
+          <label class="user-achivements__label">
+            <input type="checkbox" class="invisible-checkbox" name="achivement-3">
+            <span class="visible-checkbox"></span>
+            Видел Чака Норриса
+          </label>
+          <label class="user-achivements__label">
+            <input type="checkbox" class="invisible-checkbox" name="achivement-4">
+            <span class="visible-checkbox"></span>
+            Накупил сувениров
+          </label>
+          <label class="user-achivements__label">
+            <input type="checkbox" class="invisible-checkbox" name="achivement-5">
+            <span class="visible-checkbox"></span>
+            Удержал башню
+          </label>
+          <label class="user-achivements__label">
+            <input type="checkbox" class="invisible-checkbox" name="achivement-6">
+            <span class="visible-checkbox"></span>
+            Разгромил отель
+          </label>
+        </fieldset>
+        </div>
+
+
+
+        <fieldset class="questionnaire__field user-contacts">
+          <legend class="questionnaire__legend">Контактная информация</legend>
+          <label class="user-contacts__label">
+            Номерок телефончика:
+            <input class="questionnaire__textfield" type="text" name="user-tel" placeholder="Номер, пожалуйста">
+          </label>
+          <label class="user-contacts__label">
+            Адресок почты:
+            <input class="questionnaire__textfield" type="text" name="user-email" placeholder="E-mail, пожалуйста">
+          </label>
+        </fieldset>
+
+        <div class="grey-bg flex-wrapper_user-app">
+        <fieldset class="questionnaire__field user-app">
+          <legend  class="questionnaire__legend">С каким приложением путешествовали?</legend>
+          <label class="user-app__label">
+            <input type="radio" class="invisible-radiobox" name="user-application" value="iOS">
+            <span class="visible-radiobox"></span>
+            Pink для iOS
+          </label>
+          <label class="user-app__label">
+            <input type="radio" class="invisible-radiobox" name="user-application" value="Android">
+            <span class="visible-radiobox"></span>
+            Pink на Android
+          </label>
+          <label class="user-app__label">
+            <input type="radio" class="invisible-radiobox" name="user-application" value="Windows">
+            <span class="visible-radiobox"></span>
+            Windows Phone
+          </label>
+        </fieldset>
+      </div>
+
+
+        <fieldset class="questionnaire__field user-feedback">
+          <legend  class="questionnaire__legend">Опишите свои эмоции</legend>
+          <textarea class="questionnaire__textfield user-feedback__textarea" name="user-feedback" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </fieldset>
+
+
+        <div class="questionnaire__submit">
+          <button type="submit" class="questionnaire__submit-btn">Отправить форму</button>
+          <span class="questionnaire__note"><b>*</b> - обязательные поля</span>
+        </div>
+
+      </form>
+    </div>
+
+  </section>
+
+  <div class="wrapper-layout-center">
+    <div class="bottom-line bottom-line_photo">
+      <a href="index.html" class="disabled">
+        <img src="img/bottom-line-logo.png" alt="PINK" class="bottom-line__logo">
+      </a>
+      <div class="social">
+        <a href="#" class="social-btn social-btn_tw">twitter</a>
+        <a href="#" class="social-btn social-btn_fb">facebook</a>
+        <a href="#" class="social-btn social-btn_yt">youtube</a>
+      </div>
+      <div class="bottom-line__copyright">
+        Разработано
+        <img src="img/copyright-logo.png" alt="#" class="bottom-line__copyright-logo">
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="js/javascript.js"></script>
+</html>
