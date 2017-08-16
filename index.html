@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Главная - PINK</title>
 </head>
-<body>
+<body class="index-body">
   <header class="page-header">
 
     <nav class="main-nav main-nav_closed main-nav_nojs">
@@ -21,7 +21,7 @@
         <button class="main-nav__toggle" type="button"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item_current"><a href="#">Главная</a></li>
-          <li class="main-nav__item"><a href="#">Фотографии</a></li>
+          <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
           <li class="main-nav__item"><a href="#">Конкурс</a></li>
           <li class="main-nav__item"><a href="#">Html academy</a></li>
         </ul>
@@ -138,7 +138,7 @@
             <div class="price__line price__line_third nocheck"><span>Комментарии</span></div>
           </div>
           <div class="price__column price__column_standard">
-            <div class="price__header">
+            <div class="price__header price__header_bestseller">
               <b>стандарт</b>
               3,99 usd
             </div>
@@ -183,7 +183,12 @@
         </div>
       </div>
     </div>
-    <div id="yandex-map"></div>
+
+    <div class="map-wrapper">
+      <div id="yandex-map"></div>
+    </div>
+
+
     <div class="wrapper-layout-center">
       <div class="bottom-line">
         <a href="index.html" class="disabled">
@@ -203,4 +208,5 @@
   </footer>
 </body>
 <script src="js/javascript.js"></script>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8a10a6791ec1b8f043223f677e9d69065647f41f1a671cd423f831b11fcb851d&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true&id=yandex-map"></script>
 </html>

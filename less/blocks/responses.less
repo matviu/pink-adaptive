@@ -1,10 +1,25 @@
 .responses {
+  position: relative;
   background-color: #ffffff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+    right: 0;
+
+    border: 45px solid transparent;
+    border-top: 45px solid #ffffff;
+    border-left: 50vw solid #ffffff;
+    border-right: 50vw solid transparent;
+  }
 }
 
 .responses__wrapper {
   position: relative;
   padding-bottom: 80px;
+  padding-top: 40px;
   overflow: hidden;
 }
 
@@ -96,6 +111,13 @@
 }
 
 @media @desktop-width {
+
+  .responses__wrapper {
+    padding-top: 190px;
+    padding-bottom: 35px;
+
+    background: url("../img/quotes.png") no-repeat 50% 20%;
+  }
 
   .responses__prev,
   .responses__next {

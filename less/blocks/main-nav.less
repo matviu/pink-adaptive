@@ -1,5 +1,8 @@
 .main-nav {
   position: relative;
+  z-index: 10;
+
+  transition: 0.3s;
 }
 
 .main-nav_closed {
@@ -87,6 +90,7 @@
 
 .main-nav__list {
   position: absolute;
+  z-index: 1;
   top: 70px;
   left: 0;
   width: 100%;
@@ -127,8 +131,14 @@
     display: none;
   }
 
+  @keyframes slidedown {
+    0% {transform: translateY(-1000px);}
+    100% {transform: translateY(0px);}
+  }
+
   .main-nav_opened .main-nav__list {
     display: block;
+    animation: slidedown 0.5s;
   }
 }
 

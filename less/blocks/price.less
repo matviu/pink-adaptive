@@ -27,6 +27,8 @@
 }
 
 .price__header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +42,25 @@
   line-height: 30px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.price__header_bestseller {
+
+  overflow: hidden;
+
+  &::after {
+    content: "ХИТ";
+    position: absolute;
+    top: 7px;
+    left: -28px;
+    width: 100px;
+
+    background-color: #d22856;
+    transform: rotate(-45deg);
+
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
 .price__header b {
@@ -161,7 +182,7 @@
   }
 
   .price__inner-container {
-
+    transform: translateX(0%);
   }
 
   .price__table {
