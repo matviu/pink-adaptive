@@ -2,8 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+
   <title>Фотографии - PINK</title>
 </head>
 <body class="photo-body">
@@ -198,41 +201,40 @@
 
   <section class="add-photo">
     <div class="wrapper-layout-center add-photo__wrapper">
+
       <div class="add-photo__photo-container">
         <img src="img/add-photo-example.jpg" alt="ваше фото" class="add-photo__photo">
       </div>
+
       <div class="add-photo__ctrl">
         <div class="add-photo__settings">
-          <div class="add-photo__setting add-photo__setting_cadr">
+          <section class="add-photo__icon-wrapper">
             <label>
-              <input class="cadr_active" type="radio" name="settings-toggle">
+              <input class="cadr_active" type="radio" name="settings-toggle" value="cadr">
               <span class="settings-icon cadr-icon"></span>
             </label>
+            <label>
+              <input class="fill_active" type="radio" name="settings-toggle" value="fill">
+              <span class="settings-icon fill-icon"></span>
+            </label>
+            <label>
+              <input class="contrast_active" type="radio" name="settings-toggle" value="contrast">
+              <span class="settings-icon contrast-icon"></span>
+            </label>
+          </section>
+
+          <section class="add-photo__slide-wrapper">
             <div class="settings-slide settings-slide_cadr">
               <span class="settings-slider"></span>
             </div>
-          </div>
-          <div class="add-photo__setting add-photo__setting_fill">
-            <label>
-              <input class="fill_active" type="radio" name="settings-toggle">
-              <span class="settings-icon fill-icon"></span>
-            </label>
             <div class="settings-slide settings-slide_fill">
               <span class="settings-slider"></span>
             </div>
-          </div>
-          <div class="add-photo__setting add-photo__setting_contrast">
-            <label>
-              <input class="contrast_active" type="radio" name="settings-toggle">
-              <span class="settings-icon contrast-icon"></span>
-            </label>
             <div class="settings-slide settings-slide_contrast">
               <span class="settings-slider"></span>
             </div>
-          </div>
+          </section>
         </div>
-
-        <div class="mobile-slide-container"></div>
 
         <div class="add-photo__btns">
           <button type="button" class="add-photo__btn add-photo__btn_add">Запостить
@@ -241,12 +243,13 @@
           </button>
         </div>
       </div>
+
     </div>
   </section>
 
   <div class="wrapper-layout-center">
     <div class="bottom-line bottom-line_photo">
-      <a href="index.html" class="disabled">
+      <a href="index.html" class="">
         <img src="img/bottom-line-logo.png" alt="PINK" class="bottom-line__logo">
       </a>
       <div class="social">

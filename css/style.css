@@ -1183,10 +1183,19 @@ button:focus {
 }
 .add-photo__settings {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   padding: 0 20%;
+}
+.add-photo__icon-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.add-photo__slide-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
 }
 .cadr_active,
 .fill_active,
@@ -1230,8 +1239,15 @@ button:focus {
 .settings-slide {
   display: none;
   width: auto;
-  height: 2px;
+  height: 3px;
+  margin: 20px 0;
   background-color: #283645;
+}
+.settings-slide_invisible {
+  display: none;
+}
+.settings-slide_visible {
+  display: block;
 }
 .settings-slider {
   position: relative;
@@ -1317,23 +1333,26 @@ button:focus {
     justify-content: space-between;
   }
   .add-photo__settings {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0;
   }
-  .add-photo__setting {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    border-bottom: #dddfe0 1px solid;
+  .add-photo__icon-wrapper {
+    flex-direction: column;
+    width: 20%;
   }
-  .mobile-slide-container {
-    display: none;
+  .add-photo__slide-wrapper {
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .settings-slide {
     display: block;
-    width: 70%;
+    width: 100%;
+    margin: 30px 0;
   }
   .add-photo__btns {
     justify-content: space-between;
