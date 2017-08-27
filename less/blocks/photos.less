@@ -4,6 +4,29 @@
   height: auto;
 }
 
+.main-photo__wrapper {
+  position: relative;
+
+  &::after {
+    content: "Панорама дня";
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    padding: 6px 20px;
+
+    background-color: #d22856;
+
+    font-family: "open sans", sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+
+  }
+}
+
 .photos__wrapper {
   padding: 0 20px;
 }
@@ -87,6 +110,14 @@
     max-height: 500px;
   }
 
+  .main-photo__wrapper {
+
+    &::after {
+      top: 57px;
+      right: 5.7%;
+    }
+  }
+
   .photos__wrapper {
     display: flex;
     flex-direction: row;
@@ -142,5 +173,12 @@
     display: flex;
     flex-direction: column;
     width: 300px;
+  }
+
+  .main-photo__wrapper {
+
+    &::after {
+      right: 11%;
+    }
   }
 }

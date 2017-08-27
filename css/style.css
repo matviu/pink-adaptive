@@ -1046,6 +1046,23 @@ button:focus {
   width: 100%;
   height: auto;
 }
+.main-photo__wrapper {
+  position: relative;
+}
+.main-photo__wrapper::after {
+  content: "Панорама дня";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 6px 20px;
+  background-color: #d22856;
+  font-family: "open sans", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 .photos__wrapper {
   padding: 0 20px;
 }
@@ -1109,6 +1126,10 @@ button:focus {
   .photos__main-photo {
     max-height: 500px;
   }
+  .main-photo__wrapper::after {
+    top: 57px;
+    right: 5.7%;
+  }
   .photos__wrapper {
     display: flex;
     flex-direction: row;
@@ -1154,6 +1175,9 @@ button:focus {
     display: flex;
     flex-direction: column;
     width: 300px;
+  }
+  .main-photo__wrapper::after {
+    right: 11%;
   }
 }
 .add-photo__wrapper {
@@ -1243,9 +1267,6 @@ button:focus {
   margin: 20px 0;
   background-color: #283645;
 }
-.settings-slide_invisible {
-  display: none;
-}
 .settings-slide_visible {
   display: block;
 }
@@ -1258,7 +1279,7 @@ button:focus {
   border-radius: 50%;
   border: 2px solid #d22856;
   background-color: #f2f2f2;
-  cursor: pointer;
+  cursor: move;
 }
 .settings-slider:hover {
   background-color: #d22856;
@@ -1268,7 +1289,7 @@ button:focus {
   flex-direction: column;
   justify-content: space-around;
   min-height: 200px;
-  padding: 20px 20%;
+  padding: 20px 0;
 }
 .add-photo__btn_add {
   width: 100%;
@@ -1310,6 +1331,9 @@ button:focus {
   color: rgba(255, 255, 255, 0.3);
 }
 @media (min-width: 700px) {
+  .add-photo {
+    background-color: #f2f2f2;
+  }
   .add-photo__wrapper {
     display: flex;
     flex-direction: row;
@@ -1323,6 +1347,7 @@ button:focus {
     flex-basis: 48%;
     flex-shrink: 0;
     margin: 0;
+    overflow: hidden;
   }
   .add-photo__photo {
     width: 100%;
@@ -1349,10 +1374,41 @@ button:focus {
     padding-top: 0;
     padding-bottom: 0;
   }
+  .settings-icon {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .cadr-icon {
+    background-position: 8px -143px;
+  }
+  .cadr-icon:hover {
+    background-position: 8px -143px;
+  }
+  .cadr_active:checked + .cadr-icon {
+    background-position: 8px -143px;
+  }
+  .fill-icon {
+    background-position: -72px -143px;
+  }
+  .fill-icon:hover {
+    background-position: -72px -143px;
+  }
+  .fill_active:checked + .fill-icon {
+    background-position: -72px -143px;
+  }
+  .contrast-icon {
+    background-position: -152px -143px;
+  }
+  .contrast-icon:hover {
+    background-position: -152px -143px;
+  }
+  .contrast_active:checked + .contrast-icon {
+    background-position: -152px -143px;
+  }
   .settings-slide {
     display: block;
     width: 100%;
-    margin: 30px 0;
+    margin: 43px 0;
   }
   .add-photo__btns {
     justify-content: space-between;
