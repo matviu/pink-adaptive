@@ -6,6 +6,9 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <script src="js/javascript.js" defer></script>
 
   <title>Главная - PINK</title>
 </head>
@@ -14,7 +17,7 @@
 
     <nav class="main-nav main-nav_closed main-nav_nojs">
       <div class="wrapper-layout-center main-nav__visible">
-        <a href="index.html" class="disabled">
+        <a href="index.html" class="">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/nav-logo-desktop.png">
             <source media="(min-width: 700px)" srcset="img/nav-logo-tablet.png">
@@ -116,8 +119,8 @@
         <span class="responses__dot" onclick="moveCurrentResponse(2)"></span>
         <span class="responses__dot" onclick="moveCurrentResponse(3)"></span>
       </div>
-      <button class="responses__prev" type="button" onclick="plusCurrentResponse(-1)">&#10094</button>
-      <button class="responses__next" type="button" onclick="plusCurrentResponse(1)">&#10095</button>
+      <button class="responses__prev" type="button">&#10094</button>
+      <button class="responses__next" type="button">&#10095</button>
     </div>
   </section>
 
@@ -161,9 +164,9 @@
         </div>
       </div>
       <div class="price__dots">
-        <span class="price__dot price__dot_current" onclick="moveCurrentPrice(1)"></span>
-        <span class="price__dot" onclick="moveCurrentPrice(2)"></span>
-        <span class="price__dot" onclick="moveCurrentPrice(3)"></span>
+        <span class="price__dot price__dot_current"></span>
+        <span class="price__dot"></span>
+        <span class="price__dot"></span>
       </div>
     </div>
   </section>
@@ -188,13 +191,38 @@
     </div>
 
     <div class="map-wrapper">
-      <div id="yandex-map"></div>
+      <div id="map">
+        <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_ReDYWv9hfs1d9s80Bs3YV114bbYSfLQ"></script>
+        <script>
+          function initMap() {
+
+            var coordinates = new google.maps.LatLng('47.212325', '38.933663');
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                  center: coordinates,
+                  zoom: 18,
+                  disableDefaultUI: true,
+                  scrollwheel: false,
+                });
+
+            var image = 'img/map-marker-svg.png';
+            var marker = new google.maps.Marker ({
+                  position: coordinates,
+                  map: map,
+                  icon: image
+                });
+          }
+
+          initMap();
+        </script>
+      </div>
+
     </div>
 
 
     <div class="wrapper-layout-center">
       <div class="bottom-line">
-        <a href="index.html" class="disabled">
+        <a href="index.html" class="">
           <img src="img/bottom-line-logo.png" alt="PINK" class="bottom-line__logo">
         </a>
         <div class="social">
@@ -210,6 +238,4 @@
     </div>
   </footer>
 </body>
-<script src="js/javascript.js"></script>
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8a10a6791ec1b8f043223f677e9d69065647f41f1a671cd423f831b11fcb851d&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true&id=yandex-map"></script>
 </html>

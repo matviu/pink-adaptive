@@ -18,12 +18,12 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -90px;
+    bottom: -35px;
     left: 0;
     right: 0;
 
-    border: 45px solid transparent;
-    border-top: 45px solid #ffffff;
+    border: 18px solid transparent;
+    border-top: 18px solid #ffffff;
     border-left: 50vw solid #ffffff;
     border-right: 50vw solid transparent;
   }
@@ -82,6 +82,16 @@
     font-size: 40px;
     line-height: 40px;
     font-weight: 100;
+
+    &::after {
+      bottom: -54px;
+
+
+      border: 27px solid transparent;
+      border-top: 27px solid #ffffff;
+      border-left: 50vw solid #ffffff;
+      border-right: 50vw solid transparent;
+    }
   }
 
   .features__title br {
@@ -135,6 +145,18 @@
 
   .features__title-wrapper {
     padding: 0 5%;
+  }
+
+  .features__title {
+    &::after {
+      bottom: -90px;
+
+
+      border: 45px solid transparent;
+      border-top: 45px solid #ffffff;
+      border-left: 50vw solid #ffffff;
+      border-right: 50vw solid transparent;
+    }
   }
 
   .features__container {

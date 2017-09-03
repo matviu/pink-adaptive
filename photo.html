@@ -6,6 +6,9 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <script src="js/javascript.js" defer></script>
 
   <title>Фотографии - PINK</title>
 </head>
@@ -212,7 +215,7 @@
         <div class="add-photo__settings">
           <section class="add-photo__icon-wrapper">
             <label>
-              <input class="cadr_active" type="radio" name="settings-toggle" value="cadr">
+              <input class="cadr_active" type="radio" name="settings-toggle" value="cadr" checked>
               <span class="settings-icon cadr-icon"></span>
             </label>
             <label>
@@ -226,7 +229,7 @@
           </section>
 
           <section class="add-photo__slide-wrapper">
-            <div class="settings-slide settings-slide_cadr">
+            <div class="settings-slide settings-slide_cadr settings-slide_visible">
               <span class="settings-slider settings-slider_cadr"></span>
             </div>
             <div class="settings-slide settings-slide_fill">
@@ -267,5 +270,4 @@
   </div>
 
 </body>
-<script src="js/javascript.js"></script>
 </html>
