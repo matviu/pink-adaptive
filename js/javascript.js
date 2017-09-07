@@ -333,6 +333,63 @@ if(body.classList.contains("photo-body")) {
 
       };
 
+      parent.addEventListener("touchstart", function(e) {
+
+        var target = event.changedTouches[0].target;
+
+        if(! (target.classList.contains('settings-slider')) ) return;
+
+        var line = target.parentNode;
+        var dot = target;
+
+        var lineCoord = getCoord(line);
+        var dotCoord = getCoord(dot);
+        var shiftXleft = e.changedTouches[0].pageX - dotCoord.left;
+        var shiftXright = dotCoord.right - e.changedTouches[0].pageX;
+
+        document.addEventListener("touchmove", function(e) {
+
+          var left = e.changedTouches[0].pageX - lineCoord.left - shiftXleft;
+
+          if(left < 1) {
+            left = 0;
+          }
+
+          var right = lineCoord.right - e.changedTouches[0].pageX - shiftXright;
+
+          if(right < 1) {
+            left = lineCoord.right - lineCoord.left - dot.offsetWidth;
+          }
+
+          dot.style.left = left + 'px';
+
+          var img = document.querySelector('.add-photo__photo');
+
+          if(target.classList.contains('settings-slider_contrast')) {
+            var percent = (left / line.offsetWidth) * 100;
+            changeContrast(img, percent);
+          }
+
+          if(target.classList.contains('settings-slider_fill')) {
+
+            var percent = (left / line.offsetWidth) * 100;
+            changeFill(img, percent);
+          }
+
+          if(target.classList.contains('settings-slider_cadr')) {
+
+            var multiplier = (left / line.offsetWidth) + 1;
+            changeCadr(img, multiplier);
+          }
+
+        });
+
+        document.onmouseup = function() {
+          document.onmouseup = document.onmousemove = null;
+        }
+
+      });
+
       function getCoord(elem) {
         var box = elem.getBoundingClientRect();
 
@@ -359,4 +416,11 @@ if(body.classList.contains("photo-body")) {
 
 })();
 
-/*--img filters--*/
+
+// (function(){
+//
+//   window.addEventListener("touchstart", function(e) {
+//     console.log(e.changedTouches[0].target);
+//   });
+//
+// })();
